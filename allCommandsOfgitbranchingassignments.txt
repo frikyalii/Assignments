@@ -1,0 +1,121 @@
+
+uzma@LAPTOP-RV81UL4O MINGW64 ~/Desktop/git/Assignments (main)
+$ git init
+Reinitialized existing Git repository in C:/Users/uzma/Desktop/git/Assignments/.git/
+
+uzma@LAPTOP-RV81UL4O MINGW64 ~/Desktop/git/Assignments (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+uzma@LAPTOP-RV81UL4O MINGW64 ~/Desktop/git/Assignments (main)
+$ git add .
+
+uzma@LAPTOP-RV81UL4O MINGW64 ~/Desktop/git/Assignments (main)
+$ git commit -m 'first commit of readme.txt file'
+[main fba5d36] first commit of readme.txt file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.txt
+
+uzma@LAPTOP-RV81UL4O MINGW64 ~/Desktop/git/Assignments (main)
+$ git checkout -b html-assignments
+Switched to a new branch 'html-assignments'
+
+uzma@LAPTOP-RV81UL4O MINGW64 ~/Desktop/git/Assignments (html-assignments)
+$ git status
+On branch html-assignments
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+uzma@LAPTOP-RV81UL4O MINGW64 ~/Desktop/git/Assignments (html-assignments)
+$ git add .
+
+uzma@LAPTOP-RV81UL4O MINGW64 ~/Desktop/git/Assignments (html-assignments)
+$ git status
+On branch html-assignments
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   index.html
+
+
+uzma@LAPTOP-RV81UL4O MINGW64 ~/Desktop/git/Assignments (html-assignments)
+$ git commit -m 'index.html commited in html-assignment'
+[html-assignments b86a888] index.html commited in html-assignment
+ 1 file changed, 15 insertions(+)
+ create mode 100644 index.html
+
+uzma@LAPTOP-RV81UL4O MINGW64 ~/Desktop/git/Assignments (html-assignments)
+$ git status
+On branch html-assignments
+nothing to commit, working tree clean
+
+uzma@LAPTOP-RV81UL4O MINGW64 ~/Desktop/git/Assignments (html-assignments)
+$ git status
+On branch html-assignments
+nothing to commit, working tree clean
+
+uzma@LAPTOP-RV81UL4O MINGW64 ~/Desktop/git/Assignments (html-assignments)
+$ git status
+On branch html-assignments
+nothing to commit, working tree clean
+
+uzma@LAPTOP-RV81UL4O MINGW64 ~/Desktop/git/Assignments (html-assignments)
+$ git checkout -b master
+Switched to a new branch 'master'
+
+uzma@LAPTOP-RV81UL4O MINGW64 ~/Desktop/git/Assignments (master)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+uzma@LAPTOP-RV81UL4O MINGW64 ~/Desktop/git/Assignments (main)
+$ git checkout main git merge html-assignment
+error: pathspec 'git' did not match any file(s) known to git
+error: pathspec 'merge' did not match any file(s) known to git
+error: pathspec 'html-assignment' did not match any file(s) known to git
+
+uzma@LAPTOP-RV81UL4O MINGW64 ~/Desktop/git/Assignments (main)
+$ git checkout main merge html-assignment
+error: pathspec 'merge' did not match any file(s) known to git
+error: pathspec 'html-assignment' did not match any file(s) known to git
+
+uzma@LAPTOP-RV81UL4O MINGW64 ~/Desktop/git/Assignments (main)
+$ git merge html-assignment
+merge: html-assignment - not something we can merge
+
+uzma@LAPTOP-RV81UL4O MINGW64 ~/Desktop/git/Assignments (main)
+$ git merge html-assignments
+Updating fba5d36..b86a888
+Fast-forward
+ index.html | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+ create mode 100644 index.html
+
+uzma@LAPTOP-RV81UL4O MINGW64 ~/Desktop/git/Assignments (main)
+$ git branch -d html-assignments
+Deleted branch html-assignments (was b86a888).
+
+uzma@LAPTOP-RV81UL4O MINGW64 ~/Desktop/git/Assignments (main)
+$ git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 839 bytes | 839.00 KiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/frikyalii/Assignments.git
+   f41df32..b86a888  main -> main
+
+uzma@LAPTOP-RV81UL4O MINGW64 ~/Desktop/git/Assignments (main)
+$
